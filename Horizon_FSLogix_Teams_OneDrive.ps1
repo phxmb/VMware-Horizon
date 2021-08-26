@@ -11,4 +11,4 @@ Start-Process msiexec.exe -Wait -ArgumentList '/I C:\gold\Teams_windows_x64.msi 
 
 #OneDrive pre Machine Installation#
 Start-BitsTransfer -Source 'https://go.microsoft.com/fwlink/?linkid=844652' -Destination 'c:\gold\OneDriveSetup.exe' -Priority High -TransferPolicy Always -ErrorAction Continue -ErrorVariable $ErrorBits
-Start-Process -FilePath 'c:\gold\OneDriveSetup.exe /allusers'
+Start-Process -FilePath 'c:\gold\OneDriveSetup.exe' -ArgumentList '/allusers'
