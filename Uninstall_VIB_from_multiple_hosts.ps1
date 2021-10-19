@@ -21,7 +21,7 @@ $Credentials = New-Object System.Management.Automation.PSCredential -ArgumentLis
 Connect-VIServer -Server $vCenterServer -Credential $Credentials
 
 $ESXiHosts = Get-VMHost | Where { $_.ConnectionState -eq "Maintenance" }
-$VIBs = @("NVIDIA-VMware_ESXi_6.7_Host_Driver")
+$VIBs = @("i40enu")
 
 Foreach ($ESXiHost in $ESXiHosts) {
     Write-host "Working on $ESXiHost."
