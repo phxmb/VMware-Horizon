@@ -18,6 +18,8 @@ $AdminUsername = Read-Host ("Enter the username for the administrative account")
 $AdminPassword = Read-Host ("Password for " + $AdminUsername) -AsSecureString:$true
 $Credentials = New-Object System.Management.Automation.PSCredential -ArgumentList $AdminUsername, $AdminPassword
 
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
+
 Connect-VIServer -Server $vCenterServer -Credential $Credentials
 
 $ESXiHosts = Get-VMHost | Where { $_.ConnectionState -eq "Maintenance" }
