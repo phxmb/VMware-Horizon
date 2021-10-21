@@ -1,5 +1,11 @@
 # VMware-Horizon
 
+Powercli can be installed using the following command:
+
+Install-Module -Name VMware.PowerCLI
+
+https://www.powershellgallery.com/packages/VMware.PowerCLI/
+
 Uninstall_VIB_from_multiple_hosts.ps1 can be used the fix the following issue:
 
 https://kb.vmware.com/s/article/85982
